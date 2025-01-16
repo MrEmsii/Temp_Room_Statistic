@@ -144,12 +144,12 @@ def calculator():
     for row in cursor:
         last_index = row[0]
 
-    cursor = conn.execute("SELECT id, godzina, data FROM temperatura WHERE id=1")
+    cursor = conn.execute("SELECT id, time, data FROM temperatura WHERE id=1")
     for row in cursor:
         chwila_hours = datetime.datetime(int(row[2][0:4]), int(row[2][5:7]), int(row[2][8:10]), int(row[1][0:2]))
         chwila_days = datetime.date(int(row[2][0:4]), int(row[2][5:7]), int(row[2][8:10]))
 
-    cursor = conn.execute("SELECT id, godzina, data, temp_dot FROM temperatura")
+    cursor = conn.execute("SELECT id, time, data, temp_dot FROM temperatura")
     for row in cursor:
         calc_temp_hours(row[2],row[1],row[3], row[0], last_index)
         calc_temp_days(row[2], row[3], row[0], last_index)

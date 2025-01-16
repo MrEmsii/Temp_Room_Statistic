@@ -258,8 +258,8 @@ class plots:
                 plt.draw()
   
 try:
-    Heat = "C:\GitHUB\SQL_Base\Temp_Room_Statistic\Heat.db"
-    Stats2 = "C:\GitHUB\SQL_Base\Temp_Room_Statistic\Stats2.db"
+    Heat = "C:\GitHUB\Temp_Room_Statistic\Heat.db"
+    Stats2 = "C:\GitHUB\Temp_Room_Statistic\Stats2.db"
 
     SQLbase.create(Stats2)
 
